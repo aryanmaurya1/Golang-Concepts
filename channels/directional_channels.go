@@ -27,14 +27,13 @@ import (
 
 // -----------------------------------------------------
 
-
-func sendAndReceiveBothFromChannel(c chan int){
+func sendAndReceiveBothFromChannel(c chan int) {
 	c <- 10
 	fmt.Println(<-c)
 }
+
 // OUTPUT
 // 10
-
 
 func DirectionalChannels() {
 	var c chan int = make(chan int, 1)
