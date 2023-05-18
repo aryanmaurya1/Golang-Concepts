@@ -36,4 +36,26 @@ func main() {
 	fmt.Println(sumFloats(floats))
 	fmt.Println(sumIntsAndFloat(floats))
 	fmt.Println(sumIntsAndFloat(ints))
+
+	container := GenericContainer[int]{
+		values: []int{1, 2, 3},
+		keys:   []int{2, 3, 4},
+	}
+
+	container.DisplayGenericContainer()
+	containerf := GenericContainer[float32]{
+		values: []float32{1,2,3,4},
+		keys: []float32{0,9,8,7},
+	}
+	containerf.DisplayGenericContainer()
 }
+
+// OUTPUT
+// 21
+// 31.9
+// 31.9
+// 21
+// Keys :  [2 3 4]
+// Values :  [1 2 3]
+// Keys :  [0 9 8 7]
+// Values :  [1 2 3 4]
