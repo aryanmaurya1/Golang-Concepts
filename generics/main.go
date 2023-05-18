@@ -48,6 +48,13 @@ func main() {
 		keys: []float32{0,9,8,7},
 	}
 	containerf.DisplayGenericContainer()
+
+	containers := GenericContainer[string]{
+		keys: []string{"a", "b", "c"},
+		values: []string{"Apple", "Boy", "Cat"},
+	}
+	containers.DisplayGenericContainer()
+
 }
 
 // OUTPUT
@@ -59,3 +66,5 @@ func main() {
 // Values :  [1 2 3]
 // Keys :  [0 9 8 7]
 // Values :  [1 2 3 4]
+// Keys :  [a b c]
+// Values :  [Apple Boy Cat]

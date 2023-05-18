@@ -6,7 +6,11 @@ type Numbers interface {
 	int | int16 | float32 | float64
 }
 
-type GenericContainer[T Numbers] struct {
+type Strings interface {
+	string
+}
+
+type GenericContainer[T Numbers | Strings] struct {
 	values []T
 	keys   []T
 }
